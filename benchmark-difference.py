@@ -14,6 +14,6 @@ headMean = mergeResult['mean']
 
 buildStr = "Branch Head Build Time: " + headMean + " | Base Branch Build Time: " + baseMean
 # print result on console and write in a file
-print buildStr
+print(buildStr)
 with open("benchmark-result.txt", 'w') as f:
     f.write(buildStr)
