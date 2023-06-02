@@ -1,11 +1,19 @@
 # Can specify scenarios to use when none are specified on the command line
-default-scenarios = ["assemble"]
+default-scenarios = ["assemble", "test"]
 
 # Scenarios are run in alphabetical order
 assemble {
     # Show a slightly more human-readable title in reports
-    title = "Clean Build Debug"
+    title = "Clean Assemble"
     # Run the 'assemble' task
-    tasks = ["assembleDebug"]
+    tasks = ["assemble"]
+    cleanup-tasks = ["clean"]
+}
+
+test {
+    # Show a slightly more human-readable title in reports
+    title = "Clean Test"
+    # Run the 'test' task
+    tasks = ["test"]
     cleanup-tasks = ["clean"]
 }
