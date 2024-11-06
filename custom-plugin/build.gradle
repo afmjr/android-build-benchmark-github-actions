@@ -1,0 +1,22 @@
+plugins {
+    id 'groovy-gradle-plugin'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation 'com.google.code.gson:gson:2.8.6'
+}
+
+gradlePlugin {
+    plugins {
+        fetchModulesWithTests {
+            id = 'com.example.fetch-modules-with-tests'
+            implementationClass = 'FetchModulesWithTestsPlugin'
+        }
+    }
+}
